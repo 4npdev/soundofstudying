@@ -1,7 +1,9 @@
 :root {
-    --background: #111111;
+    --background: #122c2c;
     --text: #e4e4e4;
-    --primary: #cdfff7;
+    --primary: #6ba3a7;
+    --secondary: #a3dfd5;
+    --primary-active: #cdfff7;
 }
 
 *,*::before,*::after {
@@ -12,7 +14,10 @@ body {
     font-family: "Inter", sans-serif;
     margin: 0;
     color: var(--text);
-    background: var(--background);
+    background: url(assets/background.png), var(--background);
+    background-size: 400px, auto;
+    background-repeat: repeat-x, no-repeat;
+    background-position: bottom;
     display: grid;
     min-height: 100svh;
     grid-template-rows: 5rem auto 5rem;
@@ -36,7 +41,7 @@ header a {
 }
 
 header a:hover {
-    background: var(--text);
+    background: var(--primary-active);
     color: var(--background);
 }
 
@@ -65,7 +70,7 @@ main {
     gap: 2rem;
 }
 
-.btn-area button {
+.sound-btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 50px;
@@ -75,11 +80,32 @@ main {
     color: var(--background);
     font-weight: 700;
     font-family: inherit;
+    transition: background 0.2s ease;
+}
+
+.sound-btn:hover {
+    background: var(--secondary);
+}
+
+.sound-btn.active {
+    background-color: var(--primary-active);
 }
 
 footer {
     display: flex;
     justify-content: center;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+ 
+footer p {
+    background-color: var(--background);
+    line-height: 1;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    height: fit-content;
+    border-radius: 50px;
 }
 
 footer a {
