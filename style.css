@@ -1,0 +1,87 @@
+:root {
+    --background: #111111;
+    --text: #e4e4e4;
+    --primary: #cdfff7;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    color: var(--text);
+    background: var(--background);
+    display: grid;
+    min-height: 100svh;
+    grid-template-rows: 5rem auto 5rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 2rem;
+}
+
+header a {
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--text);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    line-height: 1;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+header a:hover {
+    background: var(--text);
+    color: var(--background);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-text-area {
+    text-align: center;
+}
+
+.main-text-area h1 {
+    font-size: 2.5rem;
+}
+
+.main-text-area p {
+    font-size: 1rem;
+}
+
+.btn-area {
+    display: flex;
+    gap: 2rem;
+}
+
+.btn-area button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    color: var(--background);
+    font-weight: 700;
+    font-family: inherit;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: var(--text);
+}
