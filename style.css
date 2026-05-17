@@ -15,12 +15,12 @@ body {
     margin: 0;
     color: var(--text);
     background: url(assets/background.png), var(--background);
-    background-size: 400px, auto;
+    background-size: 300px, auto;
     background-repeat: repeat-x, no-repeat;
     background-position: bottom;
     display: grid;
     min-height: 100svh;
-    grid-template-rows: 5rem auto 5rem;
+    grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -51,6 +51,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 2rem 1rem;
 }
 
 .main-text-area {
@@ -58,7 +59,7 @@ main {
 }
 
 .main-text-area h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .main-text-area p {
@@ -81,6 +82,7 @@ main {
     font-weight: 700;
     font-family: inherit;
     transition: background 0.2s ease;
+    max-width: 280px;
 }
 
 .sound-btn:hover {
@@ -110,4 +112,20 @@ footer p {
 
 footer a {
     color: var(--text);
+}
+
+@media (width < 730px) {
+    header {
+        justify-content: center;
+    }
+
+    .btn-area {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .sound-btn {
+        width: 100%;
+    }
 }
