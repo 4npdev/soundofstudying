@@ -24,7 +24,8 @@
 </head>
 <body>
     <header>
-        <a href="https://ko-fi.com/4npdev">Buy me a coffee ☕</a>
+        <button id="volume-menu-btn">🔊</button>
+        <a href="https://ko-fi.com/4npdev" disabled>Buy me a coffee ☕</a>
     </header>
     <main>
         <div class="main-text-area">
@@ -32,16 +33,34 @@
             <p>Play the sounds, and get to work!</p>
         </div>
         <div class="btn-area">
-            <button class="sound-btn" id="sound-btn">Rain</button>
-            <button class="sound-btn" id="sound-btn">Thunder</button>
-            <button class="sound-btn" id="sound-btn">City</button>
-            <button class="sound-btn" id="sound-btn">Crickets</button>
-            <button class="sound-btn" id="sound-btn">Lo-Fi</button>
+            <button class="sound-btn">Rain</button>
+            <button class="sound-btn">Thunder</button>
+            <button class="sound-btn">City</button>
+            <button class="sound-btn">Crickets</button>
+            <button class="sound-btn">Lo-Fi</button>
         </div>
     </main>
     <footer>
         <p>Created by <a href="https://www.4np.dev" target="_blank">4NP</a></p>
     </footer>
+    <div class="volume-menu" id="volume-menu">
+        <label for="rain">Rain</label>
+        <input type="range" name="rain" class="volume-range" min="0" max="1" step="0.01" value="1">
+        
+        <label for="thunder">Thunder</label>
+        <input type="range" name="thunder" class="volume-range" min="0" max="1" step="0.01" value="1">
+        
+        <label for="city">City</label>
+        <input type="range" name="city" class="volume-range" min="0" max="1" step="0.01" value="1">
+        
+        <label for="crickets">Crickets</label>
+        <input type="range" name="crickets" class="volume-range" min="0" max="1" step="0.01" value="1">
+        
+        <label for="lo-fi">Lo-Fi</label>
+        <input type="range" name="lo-fi" class="volume-range" min="0" max="1" step="0.01" value="1">
+        
+        <button id="volume-done-btn">Done</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

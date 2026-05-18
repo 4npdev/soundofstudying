@@ -26,8 +26,17 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     padding: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+header button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 header a {
@@ -112,6 +121,43 @@ footer p {
 
 footer a {
     color: var(--text);
+}
+
+.volume-menu {
+    background-color: #000000d0;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-inline: 1rem;
+    max-width: 400px;
+    position: absolute;
+    z-index: 10;
+    align-self: center;
+    justify-self: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 30px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.volume-menu.show {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.volume menu input {
+    display: inline;
+}
+
+.volume-menu button {
+    background: var(--primary-active);
+    padding: 1rem;
+    border: none;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 @media (width < 730px) {
