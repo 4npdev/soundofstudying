@@ -49,11 +49,6 @@ header a {
     transition: background 0.2s ease, color 0.2s ease;
 }
 
-header a:hover {
-    background: var(--primary-active);
-    color: var(--background);
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -92,10 +87,6 @@ main {
     font-family: inherit;
     transition: background 0.2s ease;
     max-width: 280px;
-}
-
-.sound-btn:hover {
-    background: var(--secondary);
 }
 
 .sound-btn.active {
@@ -177,5 +168,16 @@ footer a {
 
     .sound-btn {
         width: 100%;
+    }
+}
+
+@media (width > 730px) {
+    header a:hover {
+        background: var(--primary-active);
+        color: var(--background);
+    }
+
+    .sound-btn:hover {
+        background: var(--secondary);
     }
 }
