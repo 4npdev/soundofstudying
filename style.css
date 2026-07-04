@@ -20,6 +20,10 @@ body {
     background-position: bottom;
     display: grid;
     min-height: 100svh;
+}
+
+.wrapper {
+    display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
